@@ -46,4 +46,4 @@ Dr Steven Wooding is a Senior Policy Analyst in the Research Strategy Office at 
 
 He has recently looked at the evidence behind using peer review for funding allocation, and worked with foundations to develop improved methods of selecting research projects to boost innovation. Alongside his research interests Steve is lead for Outputs for the University of Cambridge’s submission for REF2021. Steve has broader interests in the use of evidence in policy; and approaches to visualising concepts and data. Previously, Steve worked at the Centre for Science Policy as Lead for Research; and at RAND Europe where he was Director of the Innovation Health and Science team. He advises on various projects around the assessment of research.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+# {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
