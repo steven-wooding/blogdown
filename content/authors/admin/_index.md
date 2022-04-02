@@ -42,8 +42,13 @@ superuser: true
 title: Steven Wooding
 ---
 
-Dr Steven Wooding is a Senior Policy Analyst in the Research Strategy Office at the University of Cambridge; an Affiliated Researcher at the Bennett Institute for Public Policy; a Visiting Research Fellow at the Centre for Science Policy and a Senior Research Associated at the Intellectual Forum at Jesus College. His central research interest is how research itself works: from funding processes; to the social machinery of research and the wider impact of research. 
+Thinking It Through is an attempt to take the mindset of a researcher and apply it to everyday life, and to create something along the way. Thinking things through takes time and energy, hopefully other people will find the end result useful, and maybe even entertaining.
 
-He has recently looked at the evidence behind using peer review for funding allocation, and worked with foundations to develop improved methods of selecting research projects to boost innovation. Alongside his research interests Steve is lead for Outputs for the University of Cambridge’s submission for REF2021. Steve has broader interests in the use of evidence in policy; and approaches to visualising concepts and data. Previously, Steve worked at the Centre for Science Policy as Lead for Research; and at RAND Europe where he was Director of the Innovation Health and Science team. He advises on various projects around the assessment of research.
+The site is written by Steven Wooding, a parent, partner and policy researcher based in Cambridge, UK - who is slightly concerned about referring to himself in the third person.
+
+[Contact]::
+[If you have comments send them to steve@thinkingitthrough.net or, if they're short, @thinkingitthro on Twitter]::
+
+[If you want to hear about new articles you can also follow @thinkingitthro on Twitter.]::
 
 [  {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}. ]::
