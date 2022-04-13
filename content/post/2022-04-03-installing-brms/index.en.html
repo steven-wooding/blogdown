@@ -1,0 +1,38 @@
+---
+title: Installing BRMS
+author: Steven Wooding
+date: '2022-04-03'
+slug: installing-brms
+categories: []
+tags:
+  - R
+  - RStudio
+  - macOS
+  - brms
+  - Bayesian
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2022-04-03T11:34:17+01:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+<script src="{{< blogdown/postref >}}index.en_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Doing this on a M1 Macbook Pro running macOS Big Sur 11.6.4. R 4.0.3 platform x86_64-apple-darwin17.0 which I think means that R is running in Rosetta emulation. RStudio Pre-Release Build 2022-02-00.</p>
+<p>Xcode was already installed but did some updating and installation of extra components when I launched it. Current version was Version 13.2.1 (13C100).</p>
+<p>Using instructions from <a href="https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started" class="uri">https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started</a></p>
+<div id="configuring-c-toolchain-for-mac" class="section level2">
+<h2>Configuring C Toolchain for Mac</h2>
+<p>This page has a toolchain configuration utility which I used. Downloaded from <a href="https://github.com/rmacoslib/r-macos-rtools/releases/tag/v4.0.0" class="uri">https://github.com/rmacoslib/r-macos-rtools/releases/tag/v4.0.0</a> and then launched and ran like a normal installer.</p>
+<p>It gave this rather alarming warning:</p>
+<p><img src="images/paste-A63363BD.png" /></p>
+<p>Clicking ‘Open’ worked fine but the installer seems to assume you don’t already have Xcode installed so it wants to download lots of files - which isn’t ideal when you’re in the back of car driving round Kings Lynn. So I chickened out.</p>
+<p><img src="images/paste-0C54626D.png" /></p>
+</div>
