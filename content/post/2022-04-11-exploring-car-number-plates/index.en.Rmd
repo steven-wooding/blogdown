@@ -54,12 +54,4 @@ posterior_samples(plates1.0) %>%
 
 ```
 
-```{r}
-# Examples from rethinking
-
-data(chimpanzees, package = "rethinking")
-d <- chimpanzees
-
-```
-
 
