@@ -1,0 +1,28 @@
+---
+title: Is the pond leaking?
+author: Steven Wooding
+date: '2022-04-16'
+slug: is-the-pond-leaking
+categories: []
+tags:
+  - R
+  - RStudio
+  - brms
+  - Gardening
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2022-04-16T20:13:00+01:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r}
+pacman::p_load(tidyverse, brms) 
+```
+
+
