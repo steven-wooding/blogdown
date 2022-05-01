@@ -1,0 +1,117 @@
+---
+title: "Thinking about CVs and shortlisting"
+author: "Steven Wooding"
+date: '2022-04-13'
+slug: thinking-about-cvs-and-shortlisting
+categories: []
+tags:
+- R
+- brms
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2022-04-13T19:55:05+01:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r}
+pacman::p_load(tidyverse, brms) 
+```
+
+# What are we measuring
+
+We're assuming that there are a series of characteristics or competencies that determine how good a scientist a person is. To start with I'm going to assume there are two different 'buckets' of characteristics: narrow academic achievement which I'll call `A` (publications, grants, that sort of thing); and secondly wider working skills, which I'll call `W` around mentoring, leadership, contributions to the community.
+
+To start with we're going to assume these characteristics aren't correlated. And that the overall ranking of the candidates consists of a linear combination of the two skills, but the weighting of the different skill sets differs depending on the format of the CV - and in this case that the narrative CV increases the weight given to wider skills, so that candidates with good wider skills do *better* when assessed with narrative CVs as their skills are noticed.
+
+(Alternatively we could assume it is just that each type of skill can be more accurately assessed by the different formats of CVs).
+
+Let's assume each is equivalently normally distributed mean = 100, standard deviation = 20.
+
+Now let's take 20 candidates.
+
+```{r}
+num_candidates <- 20
+
+candidates <- data.frame(name = letters[1:num_candidates], A = rnorm(num_candidates, mean = 100, sd = 20), W = rnorm(num_candidates, mean = 100, sd = 20))
+
+ggplot(candidates, aes(x = A, y = W)) +
+  geom_point()
+
+```
+
+Each of these candidates prepares a classical academic CV and a narrative CV. We assume in this first example that: 1) For the classical CV the academic skill contributes more to the overall assessment 2) For the narrative CV the wider skills contribute more to the overall assessment And for each assessment there is an inaccuracy in this assessment - ie an error term. We assume this error term is for the overall assessment. This gives two expressions for perceived ability - that when assessed by a classical CV $C$ and when assessed with a narrative CV $N$.
+
+[I think we might need another parameter for one of the academic skills to allow it a different weight on the two different measures]
+
+$\mathrm{C}_{i}=\mathrm{A}_{i} + \gamma\mathrm{W}_{i} + \epsilon$
+
+$\mathrm{N}_{i}=\mathrm{A}_{i} + \nu\mathrm{W}_{i} + \epsilon$
+
+[or can we use the equation from the proposal - but can this model accommodate all possible combinations of influence]
+
+$\mathrm{C}_{i}=\alpha\mathrm{A}_{i} + (1 - \phi){W}_{i} + \epsilon$
+
+$\mathrm{N}_{i}=(1 - \alpha){A}_{i} + \phi{W}_{i} + \epsilon$
+
+50/50 80/20 - a = 1-w and 0.8(1-a) = 0.2w
+                          0.8 - 0.8a = 0.2w
+                          4 - 4a = w
+              a = 1 - 4 +4a
+              -3a = -3
+              a = 1       w = 0
+
+
+
+30/70 70/30
+60/40 90/10
+100/0 90/10
+100/0 50/50
+
+[In fact I think we might only be able to examine the _additional_ influence of the wider skills. But if we only have one person assessing each person how to we tell that it is due to the characteristics of the applicant and not the error in the accuracy of the assessment of skills]
+
+(It might be better to assume that the error in the assessment of the different skills are different types for the different types of CV - ie that for a classical CV, academic skill can be assessed for accurately)
+
+[Need to normalise these scores when plotting, or the narrative CVs all end up with higher scores on average - do I need to do this for the stats forumlas?]
+
+[Complexity to add: these assessments will be made by different people]
+
+Let's assuming $\gamma=0.2$ and $\nu=0.5$ the error has mean = 0 and sd = 5.
+
+```{r}
+candidate_assessment <- candidates %>% 
+  mutate(C = A + 0.2*W + rnorm(num_candidates, 0, 5),
+         N = A + 0.5*W + rnorm(num_candidates, 0, 5))
+
+ggplot(candidate_assessment, aes(x = C, y = N)) +
+  geom_point()
+```
+
+What I'm really interested are changes in rank order. So need to pivot the data to be long.
+
+```{r}
+perceived_ability_comp <- candidate_assessment %>% 
+  select(name, C, N) %>% 
+  mutate(C = C/mean(C), N = N/mean(N)) %>% 
+  pivot_longer(C:N, names_to = "cv", values_to = "score")
+
+ggplot(perceived_ability_comp, aes(x = cv, y = score, group = name, colour = name)) +
+  geom_line()
+```
+
+# Figuring out the analysis
+
+So how do I build a model to work out what $\gamma$ and $\nu$ are?
+
+# Useful bits of R for writing posts about statistics
+
+An online Latex editor that allows you to work out the Latex needed for a particular expression: <https://latexeditor.lagrida.com>
+
+This is about using Latex rather than plotmath and expression function: <https://robjhyndman.com/hyndsight/latex2exp/>
+
+Here is something about drawing DAGs and labelling them: <https://sgsong.blogspot.com/2019/10/how-to-use-math-symbols-with-ggdag.html>
