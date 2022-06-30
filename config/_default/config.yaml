@@ -17,6 +17,25 @@ hasCJKLanguage: false
 defaultContentLanguageInSubdir: false
 removePathAccents: true
 
+###########################
+## DATES
+###########################
+frontmatter:
+  date:
+  - date
+  - publishDate
+  - lastmod
+  expiryDate:
+  - expiryDate
+  lastmod:
+#  - :git
+#  - lastmod
+  - date
+  - publishDate
+  publishDate:
+  - publishDate
+  - date
+
 ############################
 ## MODULES
 ############################
