@@ -1,0 +1,32 @@
+---
+title: Interdisciplinary and ignorance
+author: Steven Wooding
+date: '2022-07-16'
+slug: back-to-research
+categories: []
+tags:
+  - Reflective
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2022-07-16T19:05:07+01:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+I'm moving back into research. That's both exciting, and more than a little scary. 
+
+For the last few years I've been helping Cambridge collect, organise and use it's research information - including helping to assemble the Outputs element of the REF return. Which seemed to go pretty well. During that time I've done some bits of research, but it's been very much a sideline: looking to understand the contribution of QR funding; and thinking about how COVID-19 vaccine research happened so quickly. Now I'm joining LIz Simmonds to run a new project looking at how to improve Research Culture.
+
+Like much of what I've done it's very pragmatic research that aims to make a difference. It's multi-method and will hopefully be interdisciplinary. And it involves doing things I've never done before. And going back to things I haven't done in a while - like running a research group. And when you're project is about improving research culture that only adds to the pressure. 
+
+Which makes it all the harder to admit there there are lots of things I don't know and need to learn - but that's true. I like think it's true of much worthwhile research.
+The model in academia is to build deep expertise and then (sometimes) broaden. So there's always somewhere safe to return to where you're the acknowledged expert. I'm not like that - I've developed my research skills from a PhD in cell biology through a decade or so of policy resarch - learning (and sometimes developing) the methods and approaches that would get us appropriately robust answers. The upside is I know a lot about different approaches and bringing the together. The downside is I don't really have a home - there's no pinacle of expertise I can retreat to when there's a battle of intellectual one-up manship, I don't have an academic tribe to return to. It can be lonely being diverse.
+
+It also means I can see the benefits of using multiple methods and disciplinary approaches; but need to draw on others' expertise to put it all into practice and ensure we get the best answers we can.
+
+So I'll be asking lots of questions and seeking lots of advice (in fact I already have). But it will be more public now. I've learned huge amounts from those who’ve answered my questions and contributed their ideas. And from the posts and Stack Exchange answers of others who were willing to admit the ignorance they wished to remove - and hopefully my questions, on everything from how to delineate culture, to statistics via how best to hold group meetings; and answers we find, will help others. But none of that makes it feel comfortable.  
